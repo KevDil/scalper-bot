@@ -38,6 +38,7 @@ export class AlternateComponent implements OnInit {
           console.log(`Alternate: ${item.name} verfügbar:`, item.available);
           this.availableMap[item.name] = item.available;  // Dynamisch die `detected` Variable setzen
         }
+        console.log('availableMap: ', this.availableMap);
         if (item.available && changed) {
           this.alertUser();
           const url = URLS[item.name as keyof typeof URLS];
