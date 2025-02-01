@@ -23,7 +23,6 @@ export default async function handler(req, res) {
                         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
                     );
 
-                    const url = 'https://www.alza.de/gigabyte-geforce-rtx-4070-super-windforce-oc-12g-d9358232.htm';
                     await page.goto(url, { waitUntil: 'networkidle2' });
 
                     // Warte einige Sekunden, um sicherzustellen, dass die Seite vollständig geladen ist
