@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FoundersEditionComponent } from './founders-edition/founders-edition.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FoundersEditionComponent],
+  imports: [FoundersEditionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
