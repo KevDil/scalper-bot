@@ -44,7 +44,6 @@ export class AlternateComponent implements OnInit {
           window.open(url, '_blank');
         }
       });
-      console.log('availableMap: ', this.availableMap);
     } catch (error) {
       console.error('Fehler beim Abrufen der API:', error);
     }
