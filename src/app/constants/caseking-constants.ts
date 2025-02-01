@@ -90,7 +90,5 @@ export const URLS = {
   'Gigabyte Aorus GeForce RTX 5090 Xtreme Waterforce 32G':
     'https://www.caseking.de/GCGB-539.html',
   'Gigabyte Aorus GeForce RTX 5090 Xtreme Waterforce WB 32G':
-    'https://www.caseking.de/GCGB-540.html',
-    'ZOTAC Gaming GeForce RTX 4070 Ti Super Solid OC':
-    'https://www.caseking.de/nvidia-geforce-rtx-4070-ti-super-graphics-card-with-2-340-2-640-mhz-base-boost-clock-16-gb-gddr6x-vram-with-21-ghz-ram-clock-effective-triple-fan-cooler-design/GCZT-252.html'
+    'https://www.caseking.de/GCGB-540.html'
 };
