@@ -9,9 +9,9 @@ export const URLS = {
     'https://www.amazon.de/Gigabyte-GeForce-WINDFORCE-Grafikkarte-GV-N5080WF3OC-16GD/dp/B0DT9Y2B49',
   'Gigabyte AORUS GeForce RTX 5080 Xtreme WATERFORCE WB 16G':
     'https://www.amazon.de/Gigabyte-GeForce-Xtreme-WATERFORCE-Grafikkarte/dp/B0DT9WRP5M',
-  ' MSI GeForce RTX 5080 16G SUPRIM SOC':
+  'MSI GeForce RTX 5080 16G SUPRIM SOC':
     'https://www.amazon.de/MSI-GeForce-RTX-5080-SUPRIM/dp/B0DMSKSMKC',
-  ' MSI GeForce RTX 5080 16G Ventus 3X OC':
+  'MSI GeForce RTX 5080 16G Ventus 3X OC':
     'https://www.amazon.de/MSI-GeForce-RTX-5080-Ventus/dp/B0DT6NZ9V9',
   'PNY GeForce RTX 5080 16GB OC Triple Fan':
     'https://www.amazon.de/PNY-GeForce-RTXTM-Triple-Grafikkarte/dp/B0DTJFZ4YS',
