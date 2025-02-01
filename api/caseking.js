@@ -15,7 +15,7 @@ export default async function handler(req, res) {
         try {
           const response = await fetch(url);
           const htmlData = await response.text();
-          const available = htmlData.includes('Nicht verfügbar'); // Verfügbarkeitsprüfung
+          const available = htmlData.includes('Auf Lager'); // Verfügbarkeitsprüfung
           return { name, available };
         } catch (error) {
           return { name, error: error.message };
