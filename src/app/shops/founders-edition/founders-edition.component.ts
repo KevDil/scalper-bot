@@ -13,14 +13,10 @@ import { MP3_URL } from '../../constants/shared-constants';
 })
 export class FoundersEditionComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
-  private detected5080: boolean = false;
-  private detected5090: boolean = false;
   isActive: boolean = false;
   detectedGpus: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
-    this.fetchData();
-
     interval(30000) // Alle 30 Sekunden
       .pipe(
         takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
@@ -78,5 +74,8 @@ export class FoundersEditionComponent implements OnInit, OnDestroy {
 
   toggleButton(): void {
     this.isActive = !this.isActive;
+    if (this.isActive) {
+      this.fetchData();
+    }
   }
 }

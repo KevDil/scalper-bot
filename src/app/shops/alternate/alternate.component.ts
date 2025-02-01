@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Subject } from 'rxjs';
+import { interval, Subject } from 'rxjs';
+import { takeUntil, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-alternate',
@@ -13,7 +14,12 @@ export class AlternateComponent implements OnInit {
   isActive: boolean = false;
 
   ngOnInit(): void {
-    this.fetchData();
+    interval(30000) // Alle 30 Sekunden
+          .pipe(
+            takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
+            filter(() => this.isActive) // Führt fetchData() nur aus, wenn isActive == true
+          )
+          .subscribe(async () => await this.fetchData());
   }
 
   async fetchData(): Promise<void> {
@@ -24,7 +30,7 @@ export class AlternateComponent implements OnInit {
       }
       const data = await response.json();
       data.forEach((item: { name: any; available: any; }) => {
-        console.log(`${item.name} Verfügbar:`, item.available);
+        console.log(`Alternate: ${item.name} verfügbar:`, item.available);
       });
     } catch (error) {
       console.error('Fehler beim Abrufen der API:', error);
@@ -33,6 +39,9 @@ export class AlternateComponent implements OnInit {
 
   toggleButton(): void {
     this.isActive = !this.isActive;
+    if (this.isActive) {
+      this.fetchData();
+    }
   }
 }
     /*fetch('/api/alternate')
