@@ -1,8 +1,7 @@
 import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import path from 'path';
-import chromium from 'chrome-aws-lambda';
-import puppeteer from 'puppeteer-core';
+import puppeteer from 'puppeteer';
 
 export default async function handler(req, res) {
     try {
