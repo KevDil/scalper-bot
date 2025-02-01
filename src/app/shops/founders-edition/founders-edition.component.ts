@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { interval, Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 import { URLS, APIS } from '../../constants/fe-constants';
-import { MP3_URL } from '../../constants/shared-constants';
+import { MP3_URL, TIME_INTERVAL } from '../../constants/shared-constants';
 
 @Component({
   selector: 'app-founders-edition',
@@ -17,7 +17,7 @@ export class FoundersEditionComponent implements OnInit, OnDestroy {
   availableMap: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
-    interval(30000) // Alle 30 Sekunden
+    interval(TIME_INTERVAL) // Alle 30 Sekunden
       .pipe(
         takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
         filter(() => this.isActive) // Führt fetchData() nur aus, wenn isActive == true

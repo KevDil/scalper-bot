@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { interval, Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 import { MP3_URL, TIME_INTERVAL } from '../../constants/shared-constants';
-import { URLS } from '../../constants/msi-constants';
+import { URLS } from '../../constants/amazon-constants';
 
 @Component({
-  selector: 'app-msi',
+  selector: 'app-amazon',
   imports: [CommonModule],
-  templateUrl: './msi.component.html',
-  styleUrl: './msi.component.scss',
+  templateUrl: './amazon.component.html',
+  styleUrl: './amazon.component.scss',
 })
-export class MsiComponent implements OnInit, OnDestroy {
+export class AmazonComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   isActive: boolean = false;
   availableMap: { [key: string]: boolean } = {};
@@ -32,7 +32,7 @@ export class MsiComponent implements OnInit, OnDestroy {
 
   async fetchData(): Promise<void> {
     try {
-      const response = await fetch('/api/msi');
+      const response = await fetch('/api/amazon');
       if (!response.ok) {
         throw new Error(`Fehler: ${response.status} - ${response.statusText}`);
       }
@@ -40,7 +40,7 @@ export class MsiComponent implements OnInit, OnDestroy {
       data.forEach((item: { name: string; available: boolean }) => {
         const changed = this.availableMap[item.name] != item.available;
         if (changed) {
-          console.log(`MSI: ${item.name} verfügbar:`, item.available);
+          console.log(`Amazon: ${item.name} verfügbar:`, item.available);
           this.availableMap[item.name] = item.available; // Dynamisch die `detected` Variable setzen
         }
         if (item.available && changed) {
@@ -69,7 +69,7 @@ export class MsiComponent implements OnInit, OnDestroy {
     }
   }
 }
-/*fetch('/api/alternate')
+/*fetch('/api/amazon')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));*/
