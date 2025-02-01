@@ -34,7 +34,7 @@ export class AlternateComponent implements OnInit {
       const data = await response.json();
       data.forEach((item: { name: string; available: boolean; }) => {
         console.log(`Alternate: ${item.name} verfügbar:`, item.available);
-        if (item.available || item.name == 'ASUS GeForce RTX 5080 PRIME') {
+        if (item.available) {
           this.detectedGpus[item.name] = true;  // Dynamisch die `detected` Variable setzen
           this.alertUser();
           const url = URLS[item.name as keyof typeof URLS];
