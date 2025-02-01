@@ -34,7 +34,7 @@ export class CasekingComponent implements OnInit {
       const data = await response.json();
       data.forEach((item: { name: string; available: boolean; }) => {
         console.log(`Caseking: ${item.name} verfügbar:`, item.available);
-        if (item.available || item.name == 'ASUS Prime GeForce RTX 5080 OC Edition') {
+        if (item.available) {
           this.detectedGpus[item.name] = true;  // Dynamisch die `detected` Variable setzen
           this.alertUser();
           const url = URLS[item.name as keyof typeof URLS];
