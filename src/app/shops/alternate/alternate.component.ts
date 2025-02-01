@@ -14,7 +14,7 @@ import { MP3_URL } from '../../constants/shared-constants';
 export class AlternateComponent implements OnInit {
   private destroy$ = new Subject<void>();
   isActive: boolean = false;
-  detectedGpus: { [key: string]: boolean } = {};
+  availableMap: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
     interval(30000) // Alle 30 Sekunden
@@ -33,9 +33,12 @@ export class AlternateComponent implements OnInit {
       }
       const data = await response.json();
       data.forEach((item: { name: string; available: boolean; }) => {
-        console.log(`Alternate: ${item.name} verfügbar:`, item.available);
-        if (item.available && !this.detectedGpus[item.name]) {
-          this.detectedGpus[item.name] = true;  // Dynamisch die `detected` Variable setzen
+        const changed = this.availableMap[item.name] != item.available;
+        if (changed) {
+          console.log(`Alternate: ${item.name} verfügbar:`, item.available);
+          this.availableMap[item.name] = item.available;  // Dynamisch die `detected` Variable setzen
+        }
+        if (item.available && changed) {
           this.alertUser();
           const url = URLS[item.name as keyof typeof URLS];
           window.open(url, '_blank');
