@@ -93,4 +93,6 @@ export const URLS = {
     'https://www.alternate.de/ZOTAC/GeForce-RTX-5090-AMP-Extreme-INFINITY-Grafikkarte/html/product/100110080',
   'INNO3D GeForce RTX 5090 X3':
     'https://www.alternate.de/INNO3D/GeForce-RTX-5090-X3-Grafikkarte/html/product/100109380',
+    'Gainward GeForce RTX 4070 Ghost':
+    'https://www.alternate.de/Gainward/GeForce-RTX-4070-Ghost-Grafikkarte/html/product/100078010',
 };
