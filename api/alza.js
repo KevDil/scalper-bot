@@ -36,7 +36,7 @@ export default async function handler(req, res) {
                     return { name, available };
 
                 } catch (error) {
-                    return { name, error: error.message };
+                    return res.status(500).json({ error: error.message });
                 }
             })
         );
