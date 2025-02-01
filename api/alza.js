@@ -15,7 +15,11 @@ export default async function handler(req, res) {
             urls.map(async ({ name, url }) => {
                 try {
                     // Starte Puppeteer im Headless-Modus
-                    const browser = await puppeteer.launch({ headless: 'new' });
+                    const browser = await puppeteer.launch({
+                        args: chromium.args,
+                        executablePath: await chromium.executablePath, // Nutzt den Vercel-fähigen Chromium
+                        headless: chromium.headless
+                      });
                     const page = await browser.newPage();
 
                     // Fake einen echten Browser
