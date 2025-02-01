@@ -2,10 +2,11 @@ import { Component} from '@angular/core';
 import { FoundersEditionComponent } from './shops/founders-edition/founders-edition.component';
 import { AlternateComponent } from "./shops/alternate/alternate.component";
 import { CasekingComponent } from "./shops/caseking/caseking.component";
+import { MsiComponent } from './shops/msi/msi.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent],
+  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent, MsiComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
