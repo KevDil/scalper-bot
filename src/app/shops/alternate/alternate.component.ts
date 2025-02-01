@@ -23,7 +23,9 @@ export class AlternateComponent implements OnInit {
         throw new Error(`Fehler: ${response.status} - ${response.statusText}`);
       }
       const data = await response.json();
-      console.log('Verfügbar: ', data.available);
+      data.forEach((item: { name: any; available: any; }) => {
+        console.log(`${item.name} Verfügbar:`, item.available);
+      });
     } catch (error) {
       console.error('Fehler beim Abrufen der API:', error);
     }
