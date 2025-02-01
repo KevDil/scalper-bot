@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { interval, Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
@@ -11,18 +11,23 @@ import { URLS } from '../../constants/caseking-constants';
   templateUrl: './caseking.component.html',
   styleUrl: './caseking.component.scss',
 })
-export class CasekingComponent implements OnInit {
+export class CasekingComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   isActive: boolean = false;
   availableMap: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
     interval(30000) // Alle 30 Sekunden
-          .pipe(
-            takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
-            filter(() => this.isActive) // Führt fetchData() nur aus, wenn isActive == true
-          )
-          .subscribe(async () => await this.fetchData());
+      .pipe(
+        takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
+        filter(() => this.isActive) // Führt fetchData() nur aus, wenn isActive == true
+      )
+      .subscribe(async () => await this.fetchData());
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   async fetchData(): Promise<void> {
@@ -32,11 +37,11 @@ export class CasekingComponent implements OnInit {
         throw new Error(`Fehler: ${response.status} - ${response.statusText}`);
       }
       const data = await response.json();
-      data.forEach((item: { name: string; available: boolean; }) => {
+      data.forEach((item: { name: string; available: boolean }) => {
         const changed = this.availableMap[item.name] != item.available;
         if (changed) {
           console.log(`Caseking: ${item.name} verfügbar:`, item.available);
-          this.availableMap[item.name] = item.available;  // Dynamisch die `detected` Variable setzen
+          this.availableMap[item.name] = item.available; // Dynamisch die `detected` Variable setzen
         }
         if (item.available && changed) {
           this.alertUser();
@@ -50,12 +55,12 @@ export class CasekingComponent implements OnInit {
   }
 
   private alertUser(): void {
-      const audio = new Audio(MP3_URL);
-      audio
-        .play()
-        .catch((err) => console.error('Fehler beim Abspielen des Sounds:', err));
-      //alert('Eine GPU ist verfügbar!');
-    }
+    const audio = new Audio(MP3_URL);
+    audio
+      .play()
+      .catch((err) => console.error('Fehler beim Abspielen des Sounds:', err));
+    //alert('Eine GPU ist verfügbar!');
+  }
 
   toggleButton(): void {
     this.isActive = !this.isActive;
