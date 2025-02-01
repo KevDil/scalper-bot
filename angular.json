@@ -39,7 +39,7 @@
           },
           "configurations": {
             "production": {
-            "baseHref": "https://kevdil.github.io/scalper-bot/",
+            "baseHref": "https://scalper-bot.vercel.app/",
               "budgets": [
                 {
                   "type": "initial",
