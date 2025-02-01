@@ -18,7 +18,5 @@ export const URLS = {
   'MSI GeForce RTX 5090 32G GAMING TRIO OC':
     'https://de-store.msi.com/collections/geforce-rtx-50-series-gpu/products/geforce-rtx-5090-32g-gaming-trio-oc',
   'MSI GeForce RTX 5090 32G VENTUS 3X OC':
-    'https://de-store.msi.com/collections/geforce-rtx-50-series-gpu/products/msi-grafikkarte-rtx-5090-ventus-3x-oc',
-    'MSI Grafikkartenhalter':
-      'https://de-store.msi.com/collections/geforce-rtx-50-series-gpu/products/card-holder'
+    'https://de-store.msi.com/collections/geforce-rtx-50-series-gpu/products/msi-grafikkarte-rtx-5090-ventus-3x-oc'
 };
