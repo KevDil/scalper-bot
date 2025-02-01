@@ -36,7 +36,5 @@ export const URLS = {
   'PNY GeForce RTX 5090 32GB OC Triple Fan':
     'https://www.amazon.de/PNY-GeForce-RTXTM-Triple-Grafikkarte/dp/B0DTJF8YT4',
   'MSI GeForce RTX 5090 32G Ventus 3X OC':
-    'https://www.amazon.de/MSI-GeForce-RTX-5090-Ventus/dp/B0DT6S77JK',
-    'ASUS Prime GeForce RTX 4070 SUPER OC':
-      'https://www.amazon.de/GeForce-GDDR6X-SFF-Ready-DisplayPort-PRIME-RTX4070S-O12G/dp/B08HCW5ZZM'
+    'https://www.amazon.de/MSI-GeForce-RTX-5090-Ventus/dp/B0DT6S77JK'
 };
