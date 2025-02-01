@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "docs",
-            "baseHref": "/scalper-bot/",
+            "baseHref": "https://github.com/KevDil/scalper-bot/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
