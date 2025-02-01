@@ -14,7 +14,7 @@ import { MP3_URL } from '../../constants/shared-constants';
 export class FoundersEditionComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   isActive: boolean = false;
-  detectedGpus: { [key: string]: boolean } = {};
+  availableMap: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
     interval(30000) // Alle 30 Sekunden
@@ -33,22 +33,25 @@ export class FoundersEditionComponent implements OnInit, OnDestroy {
   async fetchData(): Promise<void> {
     try {
       // Erstelle eine Liste von API- und URL-Keys
-      const keys = Object.keys(APIS) as (keyof typeof APIS)[];  
-      
+      const keys = Object.keys(APIS) as (keyof typeof APIS)[];
+
       // Iteriere über alle Keys und hole die Daten
       for (let key of keys) {
         const apiUrl = APIS[key];
         const url = URLS[key];
-  
+
         // Hole die GPU-Daten für jedes API
         const data = await this.fetchGpuData(apiUrl);
-  
+
         // Überprüfe den Erfolg der Daten und ob die GPU bereits erkannt wurde
-        if (data.success && !this.detectedGpus[key]) {
+        if (data.success) {
           const isActive: boolean = data.listMap[0].is_active === 'true';
-          console.log(`${key} verfügbar:`, isActive);
-          if (isActive) {
-            this.detectedGpus[key] = true;  // Dynamisch die `detected` Variable setzen
+          const changed = this.availableMap[key] != isActive;
+          if (changed) {
+            console.log(`FE: ${key} verfügbar:`, isActive);
+            this.availableMap[key] = isActive; // Dynamisch die `detected` Variable setzen
+          }
+          if (isActive && changed) {
             this.alertUser();
             window.open(url, '_blank');
           }
