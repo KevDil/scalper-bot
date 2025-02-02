@@ -186,9 +186,5 @@
     {
         "name": "INNO3D GeForce RTX 5090 X3",
         "url": "https://www.alternate.de/INNO3D/GeForce-RTX-5090-X3-Grafikkarte/html/product/100109380"
-    },
-    {
-        "name": "TEST",
-        "url": "https://scalper-bot.vercel.app/"
     }
 ]
