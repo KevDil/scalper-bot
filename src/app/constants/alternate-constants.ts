@@ -92,5 +92,7 @@ export const URLS = {
   'ZOTAC GeForce RTX 5090 AMP Extreme INFINITY':
     'https://www.alternate.de/ZOTAC/GeForce-RTX-5090-AMP-Extreme-INFINITY-Grafikkarte/html/product/100110080',
   'INNO3D GeForce RTX 5090 X3':
-    'https://www.alternate.de/INNO3D/GeForce-RTX-5090-X3-Grafikkarte/html/product/100109380'
+    'https://www.alternate.de/INNO3D/GeForce-RTX-5090-X3-Grafikkarte/html/product/100109380',
+    'TEST':
+      'www.google.de'
 };

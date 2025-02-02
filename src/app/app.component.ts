@@ -5,10 +5,11 @@ import { CasekingComponent } from "./shops/caseking/caseking.component";
 import { MsiComponent } from './shops/msi/msi.component';
 import { AmazonComponent } from "./shops/amazon/amazon.component";
 import { AlzaComponent } from "./shops/alza/alza.component";
+import { TestComponent } from "./test/test.component";
 
 @Component({
   selector: 'app-root',
-  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent, MsiComponent, AmazonComponent, AlzaComponent],
+  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent, MsiComponent, AmazonComponent, AlzaComponent, TestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
