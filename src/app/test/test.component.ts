@@ -12,7 +12,7 @@ export class TestComponent implements OnInit, OnDestroy {
   text = 'Nicht verfügbar';
 
   ngOnInit(): void {
-    interval(10000) // Alle 30 Sekunden
+    interval(30000) // Alle 30 Sekunden
       .pipe(
         takeUntil(this.destroy$) // Führt fetchData() nur aus, wenn isActive == true
       )

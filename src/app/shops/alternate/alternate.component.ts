@@ -17,7 +17,7 @@ export class AlternateComponent implements OnInit, OnDestroy {
   availableMap: { [key: string]: boolean } = {};
 
   ngOnInit(): void {
-    interval(TIME_INTERVAL) // Alle 30 Sekunden
+    interval(100000) // Alle 30 Sekunden
       .pipe(
         takeUntil(this.destroy$), // Stoppt den Stream, wenn die Komponente zerstört wird
         filter(() => this.isActive) // Führt fetchData() nur aus, wenn isActive == true
