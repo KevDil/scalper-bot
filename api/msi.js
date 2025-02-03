@@ -4,6 +4,9 @@ import path from 'path';
 
 export default async function handler(req, res) {
   try {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
     // JSON-Datei mit den URLs einlesen
     const filePath = path.join(process.cwd(), 'api', 'urls', 'msi-urls.json');
     const fileContent = await fs.readFile(filePath, 'utf8');
