@@ -46,8 +46,6 @@ export class ComputeruniverseComponent implements OnInit, OnDestroy {
         // Überprüfe den Erfolg der Daten und ob die GPU bereits erkannt wurde
         const isAvailable: boolean = data.itemsData[0].in_stock === 'true';
         const changed = this.availableMap[key] != isAvailable;
-        console.log('isAvailable: ', isAvailable);
-        console.log('changed: ', changed);
         if (changed) {
           console.log(
             `Computeruniverse: ${key} verfügbar (${data.itemsData[0].stockquantity}):`,
