@@ -44,17 +44,20 @@ export class ComputeruniverseComponent implements OnInit, OnDestroy {
         const data = await this.fetchGpuData(apiUrl);
 
         // Überprüfe den Erfolg der Daten und ob die GPU bereits erkannt wurde
-        if (data.success) {
-          const isAvailable: boolean = data.itemsData[0].in_stock === 'true';
-          const changed = this.availableMap[key] != isAvailable;
-          if (changed) {
-            console.log(`Computeruniverse: ${key} verfügbar (${data.itemsData[0].stockquantity}):`, isAvailable);
-            this.availableMap[key] = isAvailable; // Dynamisch die `detected` Variable setzen
-          }
-          if (isAvailable && changed) {
-            this.alertUser();
-            window.open(url, '_blank');
-          }
+        const isAvailable: boolean = data.itemsData[0].in_stock === 'true';
+        const changed = this.availableMap[key] != isAvailable;
+        console.log('isAvailable: ', isAvailable);
+        console.log('changed: ', changed);
+        if (changed) {
+          console.log(
+            `Computeruniverse: ${key} verfügbar (${data.itemsData[0].stockquantity}):`,
+            isAvailable
+          );
+          this.availableMap[key] = isAvailable; // Dynamisch die `detected` Variable setzen
+        }
+        if (isAvailable && changed) {
+          this.alertUser();
+          window.open(url, '_blank');
         }
       }
     } catch (error) {
