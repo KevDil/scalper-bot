@@ -7,10 +7,11 @@ import { AmazonComponent } from "./shops/amazon/amazon.component";
 import { AlzaComponent } from "./shops/alza/alza.component";
 import { TestComponent } from "./test/test.component";
 import { MindfactoryComponent } from "./shops/mindfactory/mindfactory.component";
+import { ComputeruniverseComponent } from './shops/computeruniverse/computeruniverse.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent, MsiComponent, AmazonComponent, AlzaComponent, TestComponent, MindfactoryComponent],
+  imports: [FoundersEditionComponent, AlternateComponent, CasekingComponent, MsiComponent, AmazonComponent, AlzaComponent, TestComponent, MindfactoryComponent, ComputeruniverseComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

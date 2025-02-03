@@ -2,16 +2,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { interval, Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
-import { URLS, APIS } from '../../constants/fe-constants';
+import { URLS, APIS } from '../../constants/computeruniverse-constants';
 import { MP3_URL, TIME_INTERVAL } from '../../constants/shared-constants';
 
 @Component({
-  selector: 'app-founders-edition',
+  selector: 'app-computeruniverse',
   imports: [CommonModule],
-  templateUrl: './founders-edition.component.html',
-  styleUrl: './founders-edition.component.scss',
+  templateUrl: './computeruniverse.component.html',
+  styleUrl: './computeruniverse.component.scss',
 })
-export class FoundersEditionComponent implements OnInit, OnDestroy {
+export class ComputeruniverseComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   isActive: boolean = false;
   availableMap: { [key: string]: boolean } = {};
@@ -45,10 +45,10 @@ export class FoundersEditionComponent implements OnInit, OnDestroy {
 
         // Überprüfe den Erfolg der Daten und ob die GPU bereits erkannt wurde
         if (data.success) {
-          const isAvailable: boolean = data.listMap[0].is_active === 'true';
+          const isAvailable: boolean = data.itemsData[0].in_stock === 'true';
           const changed = this.availableMap[key] != isAvailable;
           if (changed) {
-            console.log(`FE: ${key} verfügbar:`, isAvailable);
+            console.log(`Computeruniverse: ${key} verfügbar (${data.itemsData[0].stockquantity}):`, isAvailable);
             this.availableMap[key] = isAvailable; // Dynamisch die `detected` Variable setzen
           }
           if (isAvailable && changed) {
