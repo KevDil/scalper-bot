@@ -12,12 +12,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@sparticuz/chromium": "^132.0.0",
+    "@sparticuz/chromium": "^112.0.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "node-fetch": "^3.3.2",
-    "puppeteer": "^24.1.1",
-    "puppeteer-core": "^24.1.1",
+    "puppeteer-core": "^19.8.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "serverless-http": "^3.2.0"
