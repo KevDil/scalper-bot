@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import path from 'path';
 import puppeteer from 'puppeteer-extra';
-import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import stealthEvasions from 'puppeteer-extra-plugin-stealth/evasions';
 import chromium from '@sparticuz/chromium';
 
 puppeteer.use(StealthPlugin());
