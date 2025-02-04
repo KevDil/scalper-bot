@@ -34,7 +34,7 @@ export default async function handler(req, res) {
   }
 
   async function fetchWithBrowser(url) {
-    browser = await puppeteer.launch({
+    const browser = await puppeteer.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
