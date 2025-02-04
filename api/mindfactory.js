@@ -42,6 +42,7 @@ export default async function handler(req, res) {
       headless: chromium.headless,
       ignoreHTTPSErrors: true,
     });
+    const context = await browser.createIncognitoBrowserContext(); // Erstelle einen neuen Inkognito-Kontext
     const page = await browser.newPage();
 
     // Setze echten User-Agent, um als normaler Browser erkannt zu werden
@@ -82,7 +83,7 @@ export default async function handler(req, res) {
         secure: false
       }
     ];
-    await page.setCookie(...cookies);
+    await context.setCookies(cookies); // Setze die Cookies im BrowserContext
 
     await page.goto(url, { waitUntil: 'domcontentloaded' });
 
