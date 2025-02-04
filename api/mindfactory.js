@@ -60,7 +60,7 @@ export default async function handler(req, res) {
     const cookies = [
       {
         name: 'bm_s',
-        value: 'YAAQ1Jr3SL27/a+UAQAAxYkp0QJ6rH/KuAie/9amDKTmQfijMJfd29coQFWGXll5Gc1e5cSdPJqEVll+QAiy0JKyTXsh3wQs/RdGNtcMUUPmrMxPnc5WtfdL8/n1moGy7Z3ZOEY5+SCopidvcoILHVC7a3ZhZk6lufPmdqPW4Ox3hf8y+75zq8ScDx937L6/ZKoD/8gnMtEwpscHStMbMHPgGIQSNqtkmc7w7ae0lNhqgXb+SdtGY3K7tIlkmxqFWczueC7yEwiOSF9g0AMik+vuP9fI6MudGlfrmBSgmYJc7ZbOzjjkJxHv09xwqy2KHfg6USrtooq7RK2rOXCdJ3exjkvjxV9tfe9ANWD6JdI42WfIy3Iqs5wrpqmA8AMsYiLdXaghVd6ZA4mfOF8zYH1yzKrjhmv8NOBRA41NhdkpWpOUodr2IcJUNNZeUlMgwTfdlg75IX1RZKIiAyoR', // Ersetze mit deiner echten Session-ID aus Chrome
+        value: 'YAAQ1Jr3SCHV/a+UAQAApnZ80QLqVjKrC4UA2SOA7i1zonFEdSNUfDifRKvF/j4/JxWFCqSOHFMam+L11MZH6tNN76Nd7Z7e7yYsMr8a6i4rGj6xatUrOBrJEA8tJ+gUOxNX1uRob2+W9yKrbnXbH+Fr0jeh05WsKOhxF/wst6cmmEhFnxefhLaJ6P0bswqHZxKgXX06HFuyzyce4DVoBf//B86PxBvSe06/XiBT3KsrprAPsvFeZsROf6eMiYiI6b4G1XSLU8ATKoidmM8Xuldvf0OKqgSn1WjSsuk2NPM4Xty/3CgdRkHsBo+aRovXx9JUEygVV+qGTFoeh3wocvDDnNN+jzb3U2J4QkPqpBCGvT0Sws5r/yNYi6MRV+p3VlMjN8xOivdGZU7tqyLYAqz240N9D+yOsy1A9Mptey5FebKTB2dzEszseOekKxtEV5E4v+6sKajXINKaf0Uc', // Ersetze mit deiner echten Session-ID aus Chrome
         domain: '.mindfactory.de',
         path: '/',
         httpOnly: true,
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
       },
       {
         name: 'bm_lso',
-        value: '401FA23C3A95E7F332DB266FA645A93B52E4897B595EB497C40C5CDF1ADB8AAC~YAAQn5r3SL147KmUAQAAk7p10QIedrKVfONLF1hFGbwTRXBmb/DiqxqowbnK3X7i0m9Zza/aQ7Wa6xNRgKH6Zk9xc/gs6hda269EMHCCqCCKzxuA0Dpe1UqsHQ/BzpYmQpw/Wy8YWyzJh4BHEsxRn7bx4ZJ+3ypBsUPLnxd6n6N1mum8ffZEAPC36py+yhIqDeuYl4OheCn7ufSgwh3jLofQxpx5nre2wsDAdp2xzg2q5v3g1fZPOn79cpWv1Gis23cIL833Pdvhfx5XZzztPIkWUfremaZ2yquvSb17V26LKKzVz6cZMfDkJDU3UA9Aaghi6PzeDqAZjY6Uc8nVjZZWKWD+aL3aKnYWhzHldnBBm+CXLzFFWA5BKukR8JKyW5o9fy4tZdpKG3WWl03QfPsMFrFRVisYQH27yEsd1aZuxU2wfZ0wCYa7G1YJ4K8hU4DSvuk4xyOgfUhYD7o6rXQIfcTKROV90uJdKHdr/0XmWILpT5JXN14=^1738680942124',
+        value: 'EDE85420EA2E1DF70705E4AC89D244E6BEC21E75D9619EA69F360AAA7F444140~YAAQ1Jr3SAvV/a+UAQAAqEB80QLMSsJKaTko6Xo0CquKaBaoFyNZQiIvLTHPfteBmRFl3v7bLDATPPR0ZIdlzwvglh2JmbGyf1i5efDfgQG6/0zL0UCyi82DOyjqx5486zh74JRmuhYkjS0sxGDinkFfqjVdZjFB4peaobODcbz6O/zBqDcjg1t6k6+jS86fu0ddyL0bymwJBzK/yIQOIOkK5dmCgEUstAi70fQAbDwia4x3+InVtUXiMfP0jY6XIlrk+Sf15NOx4crZuX8h+7g4iKH5/s2x4+MfS4QdkVf7eTG2h4GPSgvtK67TyW26Nm9Kcw/ChoCEhpEbORUXXBvcSnLermtAVcnVIzHWQ/dIRKFEJEOtsEqzYHvMkw6qCLSPGAS3Xl0nerOB+mInVXlDxn8u1RT0mItYLk8TQT9Uc+R6g3euLUmFX9mGRm6s93kLjNQvZGwZp/+2OnuC1Fp0JEcj2edSfB+BP6EjNr7VGaeRZwDB3qk=^1738681369160',
         domain: '.mindfactory.de',
         path: '/',
         httpOnly: false,
@@ -76,7 +76,7 @@ export default async function handler(req, res) {
       },
       {
         name: 'bm_so',
-        value: '401FA23C3A95E7F332DB266FA645A93B52E4897B595EB497C40C5CDF1ADB8AAC~YAAQn5r3SL147KmUAQAAk7p10QIedrKVfONLF1hFGbwTRXBmb/DiqxqowbnK3X7i0m9Zza/aQ7Wa6xNRgKH6Zk9xc/gs6hda269EMHCCqCCKzxuA0Dpe1UqsHQ/BzpYmQpw/Wy8YWyzJh4BHEsxRn7bx4ZJ+3ypBsUPLnxd6n6N1mum8ffZEAPC36py+yhIqDeuYl4OheCn7ufSgwh3jLofQxpx5nre2wsDAdp2xzg2q5v3g1fZPOn79cpWv1Gis23cIL833Pdvhfx5XZzztPIkWUfremaZ2yquvSb17V26LKKzVz6cZMfDkJDU3UA9Aaghi6PzeDqAZjY6Uc8nVjZZWKWD+aL3aKnYWhzHldnBBm+CXLzFFWA5BKukR8JKyW5o9fy4tZdpKG3WWl03QfPsMFrFRVisYQH27yEsd1aZuxU2wfZ0wCYa7G1YJ4K8hU4DSvuk4xyOgfUhYD7o6rXQIfcTKROV90uJdKHdr/0XmWILpT5JXN14=',
+        value: 'EDE85420EA2E1DF70705E4AC89D244E6BEC21E75D9619EA69F360AAA7F444140~YAAQ1Jr3SAvV/a+UAQAAqEB80QLMSsJKaTko6Xo0CquKaBaoFyNZQiIvLTHPfteBmRFl3v7bLDATPPR0ZIdlzwvglh2JmbGyf1i5efDfgQG6/0zL0UCyi82DOyjqx5486zh74JRmuhYkjS0sxGDinkFfqjVdZjFB4peaobODcbz6O/zBqDcjg1t6k6+jS86fu0ddyL0bymwJBzK/yIQOIOkK5dmCgEUstAi70fQAbDwia4x3+InVtUXiMfP0jY6XIlrk+Sf15NOx4crZuX8h+7g4iKH5/s2x4+MfS4QdkVf7eTG2h4GPSgvtK67TyW26Nm9Kcw/ChoCEhpEbORUXXBvcSnLermtAVcnVIzHWQ/dIRKFEJEOtsEqzYHvMkw6qCLSPGAS3Xl0nerOB+mInVXlDxn8u1RT0mItYLk8TQT9Uc+R6g3euLUmFX9mGRm6s93kLjNQvZGwZp/+2OnuC1Fp0JEcj2edSfB+BP6EjNr7VGaeRZwDB3qk=',
         domain: '.mindfactory.de',
         path: '/',
         httpOnly: false,
@@ -100,7 +100,7 @@ export default async function handler(req, res) {
       },
       {
         name: 'NSid',
-        value: 'e46934bca3bfe1a820f3a661c2c0942f', // Falls vorhanden
+        value: '10a441d5d9f7eadee01ced3badc00f88', // Falls vorhanden
         domain: '.mindfactory.de',
         path: '/',
         httpOnly: true,
@@ -108,6 +108,14 @@ export default async function handler(req, res) {
       },
       {
         name: 'cookies_accepted',
+        value: 'true', // Falls vorhanden
+        domain: '.mindfactory.de',
+        path: '/',
+        httpOnly: false,
+        secure: false
+      },
+      {
+        name: 'cookies_piwik',
         value: 'true', // Falls vorhanden
         domain: '.mindfactory.de',
         path: '/',
