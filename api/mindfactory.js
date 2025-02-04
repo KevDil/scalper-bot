@@ -19,8 +19,9 @@ export default async function handler(req, res) {
       urls.map(async ({ name, url }) => {
         try {
           const response = await fetchWithBrowser(url);
-          const htmlData = await response.text();
-          const available = htmlData.includes('Lagernd') || htmlData.includes('Bestellt') || htmlData.includes('Verfügbar'); // Verfügbarkeitsprüfung
+          //const htmlData = await response.text();
+          //const available = htmlData.includes('Lagernd') || htmlData.includes('Bestellt') || htmlData.includes('Verfügbar'); // Verfügbarkeitsprüfung
+          const available = response.includes('Lagernd') || response.includes('Bestellt') || response.includes('Verfügbar'); // Verfügbarkeitsprüfung
           return { name, available };
         } catch (error) {
           return { name, error: error.message };
