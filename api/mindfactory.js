@@ -32,20 +32,24 @@ export default async function handler(req, res) {
   }
 
   async function fetchWithBrowser(url) {
-    const browser = await puppeteer.launch({ headless: 'new' });
+    browser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
     const page = await browser.newPage();
-  
+
     // Setze echten User-Agent, um als normaler Browser erkannt zu werden
     await page.setUserAgent(
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0'
     );
-  
+
     // HTTP-Header setzen, um die Anfrage echter wirken zu lassen
     await page.setExtraHTTPHeaders({
       'Accept-Language': 'de-DE,de;q=0.9',
       'Referer': 'https://www.mindfactory.de/',
     });
-  
+
     // ✅ Cookies setzen (VOR dem Seitenaufruf!)
     const cookies = [
       {
@@ -74,12 +78,12 @@ export default async function handler(req, res) {
       }
     ];
     await page.setCookie(...cookies);
-  
+
     await page.goto(url, { waitUntil: 'domcontentloaded' });
-  
+
     const html = await page.content();  // HTML abrufen
     await browser.close();
-  
+
     return html;
   }
 }
