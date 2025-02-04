@@ -67,6 +67,38 @@ export default async function handler(req, res) {
         secure: true
       },
       {
+        name: 'bm_lso',
+        value: '401FA23C3A95E7F332DB266FA645A93B52E4897B595EB497C40C5CDF1ADB8AAC~YAAQn5r3SL147KmUAQAAk7p10QIedrKVfONLF1hFGbwTRXBmb/DiqxqowbnK3X7i0m9Zza/aQ7Wa6xNRgKH6Zk9xc/gs6hda269EMHCCqCCKzxuA0Dpe1UqsHQ/BzpYmQpw/Wy8YWyzJh4BHEsxRn7bx4ZJ+3ypBsUPLnxd6n6N1mum8ffZEAPC36py+yhIqDeuYl4OheCn7ufSgwh3jLofQxpx5nre2wsDAdp2xzg2q5v3g1fZPOn79cpWv1Gis23cIL833Pdvhfx5XZzztPIkWUfremaZ2yquvSb17V26LKKzVz6cZMfDkJDU3UA9Aaghi6PzeDqAZjY6Uc8nVjZZWKWD+aL3aKnYWhzHldnBBm+CXLzFFWA5BKukR8JKyW5o9fy4tZdpKG3WWl03QfPsMFrFRVisYQH27yEsd1aZuxU2wfZ0wCYa7G1YJ4K8hU4DSvuk4xyOgfUhYD7o6rXQIfcTKROV90uJdKHdr/0XmWILpT5JXN14=^1738680942124',
+        domain: '.mindfactory.de',
+        path: '/',
+        httpOnly: false,
+        secure: false
+      },
+      {
+        name: 'bm_so',
+        value: '401FA23C3A95E7F332DB266FA645A93B52E4897B595EB497C40C5CDF1ADB8AAC~YAAQn5r3SL147KmUAQAAk7p10QIedrKVfONLF1hFGbwTRXBmb/DiqxqowbnK3X7i0m9Zza/aQ7Wa6xNRgKH6Zk9xc/gs6hda269EMHCCqCCKzxuA0Dpe1UqsHQ/BzpYmQpw/Wy8YWyzJh4BHEsxRn7bx4ZJ+3ypBsUPLnxd6n6N1mum8ffZEAPC36py+yhIqDeuYl4OheCn7ufSgwh3jLofQxpx5nre2wsDAdp2xzg2q5v3g1fZPOn79cpWv1Gis23cIL833Pdvhfx5XZzztPIkWUfremaZ2yquvSb17V26LKKzVz6cZMfDkJDU3UA9Aaghi6PzeDqAZjY6Uc8nVjZZWKWD+aL3aKnYWhzHldnBBm+CXLzFFWA5BKukR8JKyW5o9fy4tZdpKG3WWl03QfPsMFrFRVisYQH27yEsd1aZuxU2wfZ0wCYa7G1YJ4K8hU4DSvuk4xyOgfUhYD7o6rXQIfcTKROV90uJdKHdr/0XmWILpT5JXN14=',
+        domain: '.mindfactory.de',
+        path: '/',
+        httpOnly: false,
+        secure: true
+      },
+      {
+        name: 'bm_ss',
+        value: 'ab8e18ef4e', // Falls vorhanden
+        domain: '.mindfactory.de',
+        path: '/',
+        httpOnly: true,
+        secure: true
+      },
+      {
+        name: 'PSid',
+        value: '1738709999_31b97630e7004857742c1302a75fdf4b9f2df188afda0f8c2545d70bbe0a99488cf22579ec7ebd51cc8e7e891f96dd6c3cdfeb65645c8a9a9e748ad594595509f6241d15143644fcf6f3b2cea25f136672',
+        domain: '.mindfactory.de',
+        path: '/',
+        httpOnly: false,
+        secure: false
+      },
+      {
         name: 'NSid',
         value: 'e46934bca3bfe1a820f3a661c2c0942f', // Falls vorhanden
         domain: '.mindfactory.de',
