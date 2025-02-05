@@ -9,5 +9,5 @@ export const APIS = {
   RTX_5080:
     'https://api.store.nvidia.com/partner/v1/feinventory?status=1&skus=PRO580GFTNV&locale=de-de',
   RTX_5090:
-    'https://api.store.nvidia.com/partner/v1/feinventory?status=1&skus=PROGFTNV590&locale=de-de',
+    'https://api.store.nvidia.com/partner/v1/feinventory?status=1&skus=5090FEPROSHOP&locale=de-de',
 };
